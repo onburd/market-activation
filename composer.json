@@ -1,0 +1,26 @@
+{
+    "name": "onburd/market-activation",
+    "description": "market activation packacge",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Onburd\\MarketActivation\\": "src/"
+        }
+    },
+     "extra": {
+        "laravel": {
+            "providers": [
+                "Onburd\\MarketActivation\\MarketActivationServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Olaseyo Olumide",
+            "email": "olumideo@wakanow.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
