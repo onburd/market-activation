@@ -43,6 +43,9 @@ class MarketActivationResource extends Resource
                     ->required()->label('Currency iso code'),
 
                 TextInput::make('currency_symbol')->label('Currency symbol')
+                    ->required(),
+
+                TextInput::make('currency')->label('Currency name')
                     ->required()
 
 
@@ -62,7 +65,7 @@ class MarketActivationResource extends Resource
 
             TextColumn::make('currency_symbol')->label('Currency symbol'),
 
-            TextColumn::make('currency')->label('Currency')
+            TextColumn::make('currency')->label('Currency name')
             ])
             ->filters([
                 //
