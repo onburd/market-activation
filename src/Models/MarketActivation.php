@@ -11,6 +11,7 @@ class MarketActivation extends Model
         'country_flag',
         'country_name',
         'iso_currency',
-        'currency_symbol'
+        'currency_symbol',
+        'currency'
     ];
 }
