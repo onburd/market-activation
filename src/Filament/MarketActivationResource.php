@@ -60,7 +60,9 @@ class MarketActivationResource extends Resource
 
             TextColumn::make('iso_currency')->label('currency iso code'),
 
-            TextColumn::make('currency_symbol')->label('Currency symbol')
+            TextColumn::make('currency_symbol')->label('Currency symbol'),
+
+            TextColumn::make('currency')->label('Currency')
             ])
             ->filters([
                 //
