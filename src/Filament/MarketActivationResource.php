@@ -66,7 +66,7 @@ class MarketActivationResource extends Resource
                 TextColumn::make('iso_currency')->label('currency iso code'),
 
                 TextColumn::make('currency_symbol')->label('Currency symbol'),
-                TextColumn::make('market_email')->label('Market email')
+                TextColumn::make('market_email')->label('Market email'),
                 TextColumn::make('currency')->label('Currency name'),
                 TextColumn::make('country_code')->label('Country code')
             ])
