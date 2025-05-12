@@ -13,6 +13,7 @@ use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
 use Onburd\MarketActivation\Models\MarketActivation;
 use Filament\Forms\Components\Select;
 use App\Filament\Resources\MarketActivationResource\Pages;
@@ -44,7 +45,8 @@ class MarketActivationResource extends Resource
 
                 TextInput::make('currency_symbol')->label('Currency symbol')
                     ->required(),
-
+                Textarea::make('market_email')->label('Market email')
+                    ->required(),
                 TextInput::make('currency')->label('Currency name')
                     ->required(),
                 TextInput::make('country_code')->label('Country Code')
@@ -64,9 +66,8 @@ class MarketActivationResource extends Resource
                 TextColumn::make('iso_currency')->label('currency iso code'),
 
                 TextColumn::make('currency_symbol')->label('Currency symbol'),
-
+                TextColumn::make('market_email')->label('Market email')
                 TextColumn::make('currency')->label('Currency name'),
-                      
                 TextColumn::make('country_code')->label('Country code')
             ])
             ->filters([

@@ -13,6 +13,7 @@ class MarketActivation extends Model
         'iso_currency',
         'currency_symbol',
         'currency',
-        'country_code'
+        'country_code',
+        'market_email'
     ];
 }
