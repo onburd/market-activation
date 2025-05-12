@@ -33,8 +33,8 @@ class MarketActivationResource extends Resource
     {
         return $form
             ->schema([
-            //country_flag, country_name, iso_currency, currency_symbol
-            FileUpload::make('country_flag')
+
+                     FileUpload::make('country_flag')
                     ->directory('uploads/markets')->label('Country flag'),
 
                 TextInput::make('country_name')
@@ -45,11 +45,12 @@ class MarketActivationResource extends Resource
 
                 TextInput::make('currency_symbol')->label('Currency symbol')
                     ->required(),
-
-                    Textarea::make('market_email')->label('Market email')
+                Textarea::make('market_email')->label('Market email')
+                    ->required(),
+                TextInput::make('currency')->label('Currency name')
+                    ->required(),
+                TextInput::make('country_code')->label('Country Code')
                     ->required()
-
-
 
             ]);
     }
@@ -58,15 +59,16 @@ class MarketActivationResource extends Resource
     {
         return $table
             ->columns([
-            ImageColumn::make('country_flag')->circular()->label('Country lag'),
+                ImageColumn::make('country_flag')->circular()->label('Country lag'),
 
-            TextColumn::make('country_name')->label('Country name'),
+                TextColumn::make('country_name')->label('Country name'),
 
-            TextColumn::make('iso_currency')->label('currency iso code'),
+                TextColumn::make('iso_currency')->label('currency iso code'),
 
-            TextColumn::make('currency_symbol')->label('Currency symbol'),
-
-            TextColumn::make('market_email')->label('Market email')
+                TextColumn::make('currency_symbol')->label('Currency symbol'),
+                TextColumn::make('market_email')->label('Market email')
+                TextColumn::make('currency')->label('Currency name'),
+                TextColumn::make('country_code')->label('Country code')
             ])
             ->filters([
                 //
